@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="login-container">
+        <form id="login-form" action="navigationbar.html">
+            <h1>Hobbies Community</h1>
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <!-- <button type="submit" onclick="login()">Login</button> -->
+            <!-- <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> --> -->
+
+<html>
+    <head>
+        <style>
+            form{
+                background-color: aqua;
+                text-align: center;
+                padding: 30px;
+                margin-right: 350px;
+                margin-left: 400px;
+                border-radius: 10  0px;
+                border-color: blue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form onsubmit="dd()">
+            <label>FULL NAME :</label>
+           <input type="text" id="fullname">
+           <br><br>
+           <label>EMAIL :</label>
+           <input type= "email" id="email">
+           <br><br>
+           <label>PASSWORD :</label>
+           <input type="Password" id="pass">
+           <br><br>
+           <label>RE-PASSWORD :</label>
+           <input type="Password" id="cpass">
+           <br><br>
+           <input type="submit" style="background-color:rgb(132, 222, 222);">
+        </form>
+        NOTE : Data store in localStorage 
+        <script>
+            
+            function dd(){
+              let name=document.getElementById("fullname").value
+              let email=document.getElementById("email").value
+             let password=document.getElementById("pass").value
+             let cpass=document.getElementById("cpass").value
+
+
+                if(name.length<=5){
+                    alert("enter minmum 5 letter")
+                }
+                else if(password != cpass){
+                    alert("enter same password")
+                }
+                else{
+                    alert("successfully")
+                    localStorage.setItem("fullname",name)
+                    localStorage.setItem("email",email)
+                    localStorage.setItem("password",password)
+                    localStorage.setItem("cpassword",cpass)
+                }
+            }
+
+        </script>
+    </body>
+</html>
